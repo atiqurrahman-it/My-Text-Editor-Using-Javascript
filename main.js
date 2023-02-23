@@ -25,11 +25,32 @@ function f6(){
 
 
 function f7(){
-    textArea.style.textTransform = "uppercase";
+    // way one 
+    textArea.classList.remove('text-lowercase')
+    textArea.classList.remove('text-capitalize')
+    textArea.classList.toggle('text-uppercase')
+
+    //           second way 
+    // textArea.style.textTransform = "uppercase";
+
+
+    //           third way 
+    //  classList=textArea.getAttribute('class').split(' ')
+    //  for(const list of classList){
+    //     textArea.classList.remove(list)
+    //  }
+    //textArea.classList.toggle('text-uppercase')
+    
+
 }
 function f8(){
-    textArea.style.textTransform = "lowercase";
+    textArea.classList.remove('text-uppercase')
+    textArea.classList.remove('text-capitalize')
+    textArea.classList.toggle('text-lowercase')
 }
 function f9(){
-    textArea.style.textTransform = "capitalize";
+    textArea.classList.remove('text-uppercase')
+    textArea.classList.remove('text-lowercase')
+    textArea.classList.toggle('text-capitalize')
+
 }
