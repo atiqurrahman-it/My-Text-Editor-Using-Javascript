@@ -27,6 +27,7 @@
         width: 45px;
         border: 0 !important;
         outline: none;
+        padding: 5px;
       }
     </style>
   </head>
@@ -35,7 +36,7 @@
       <h1 class="fs-4 fw-bold text-center text-white mb-4 pt-5">
         My Text Editor
       </h1>
-      <div class="row mb-3 d-flex">
+      <div class="row mb-3 d-flex row-cols-1 row-cols-lg-3 gy-3 text-lg-center">
         <div class="col align-self-start">
           <button
             type="button"
@@ -48,15 +49,15 @@
           <button
             type="button"
             onclick="f2()"
-            class="shadow-sm btn btn-outline-success"
+            class="shadow-sm btn btn-outline-secondary"
             title="Italic Text"
           >
             <i class="fa-solid fa-italic"></i>
           </button>
           <button
             type="button"
-            onclick="f2()"
-            class="shadow-sm btn btn-outline-success"
+            onclick="f3()"
+            class="shadow-sm btn btn-outline-secondary"
             title="Italic Text"
           >
             <i class="fa-solid fa-underline"></i>
@@ -66,7 +67,7 @@
         <div class="col align-self-center">
           <button
             type="button"
-            onclick="f3()"
+            onclick="f4()"
             class="shadow-sm btn btn-outline-primary"
             title="Left Align"
           >
@@ -74,22 +75,21 @@
           </button>
           <button
             type="button"
-            onclick="f3()"
+            onclick="f5()"
             class="shadow-sm btn btn-outline-primary"
-            title="Left Align"
+            title="Center Align"
           >
             <i class="fa-solid fa-align-center"></i>
           </button>
           <button
             type="button"
-            onclick="f3()"
+            onclick="f6()"
             class="shadow-sm btn btn-outline-primary"
-            title="Left Align"
+            title="Right Align"
           >
             <i class="fa-solid fa-align-right"></i>
           </button>
-        </div>
-        <div class="col align-self-end">
+
           <input
             class="border-0 inputBtn text-center"
             type="number"
@@ -99,17 +99,59 @@
             min="1"
             max="100"
           />
-          <input type="color" id="favcolor" name="" value="#ff0000" />
+          <span class="text-white fw-bold">aA</span>
+          <input
+            class="p-2"
+            type="color"
+            id="favcolor"
+            name=""
+            value="#ff0000"
+          />
+        </div>
+
+        <div class="col align-self-end">
+          <button
+            type="button"
+            onclick="f7()"
+            class="btn shadow-sm btn-outline-secondary"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Uppercase Text"
+          >
+            Upper Case
+          </button>
+          <button
+            type="button"
+            onclick="f8()"
+            class="btn shadow-sm btn-outline-primary"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Lowercase Text"
+          >
+            Lower Case
+          </button>
+          <button
+            type="button"
+            onclick="f9()"
+            class="btn shadow-sm btn-outline-primary"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Capitalize Text"
+          >
+            Capitalize
+          </button>
         </div>
       </div>
 
       <div class="pb-5">
         <textarea
+          id="textArea"
           class="form-control"
           rows="10"
           placeholder="Enter Your message "
         ></textarea>
       </div>
     </div>
+    <script src="main.js"></script>
   </body>
 </html>
