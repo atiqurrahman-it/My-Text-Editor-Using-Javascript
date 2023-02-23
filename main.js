@@ -1,4 +1,21 @@
-textArea=document.getElementById('textArea')
+let textArea=document.getElementById('textArea')
+
+// font size increment/decrement 
+const FontSizeQuantityElement=document.getElementById('FontSizeQuantityId')
+FontSizeQuantityElement.addEventListener('click',function(){
+    // font size 
+    FontSizeQuantity=FontSizeQuantityElement.value
+   // set font size   
+    textArea.style.fontSize=`${FontSizeQuantity}px`
+})
+
+//// font colo change  
+FontcolorId
+const FontcolorIdElement=document.getElementById('FontcolorId')
+FontcolorIdElement.addEventListener('input',function(e){
+    const code=e.target.value
+    textArea.style.color=`${code}`
+})
 
 function f1(){
     textArea.classList.toggle('fw-bold')
